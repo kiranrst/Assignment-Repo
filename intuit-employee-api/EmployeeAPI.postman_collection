@@ -1,0 +1,394 @@
+{
+	"info": {
+		"_postman_id": "1d6f07af-85bf-4466-a3e5-076851183bfd",
+		"name": "Test-EmployeeAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreateEmployee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"saikiran\",\r\n    \"designation\": \"Java Developer\",\r\n    \"addressLine1\": \"SEZ-1\",\r\n    \"addressLine2\": \"Street Anna Nagar\",\r\n    \"city\": \"Banglore\",\r\n    \"state\": \"Karnataka\",\r\n    \"country\": \"INDIA\",\r\n    \"pincode\": \"530068\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/employee/createEmployee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee",
+						"createEmployee"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "CreateEmployee",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"fakf\",\r\n    \"designation\": \"Java Developer\",\r\n    \"addressLine1\": \"SEZ-1\",\r\n    \"addressLine2\": \"Street Anna Nagar\",\r\n    \"city\": \"Banglore\",\r\n    \"state\": \"Karnataka\",\r\n    \"country\": \"INDIA\",\r\n    \"pincode\": \"530068\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/employee/createEmployee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employee",
+								"createEmployee"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 29 Jul 2021 04:39:26 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 6,\n    \"name\": \"fakf\"\n}"
+				}
+			]
+		},
+		{
+			"name": "FetchByEmployeeId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employee/fetchEmployee/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employee",
+								"fetchEmployee",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 29 Jul 2021 04:43:55 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 3,\n    \"name\": \"saikiran\",\n    \"designtion\": null,\n    \"addressLine1\": \"SEZ-1\",\n    \"addressLine2\": \"Street Anna Nagar\",\n    \"city\": \"Banglore\",\n    \"state\": \"Karnataka\",\n    \"country\": \"INDIA\",\n    \"pincode\": \"530068\"\n}"
+				}
+			]
+		},
+		{
+			"name": "FetchAllEmployees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employee/fetchEmployee/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employee",
+								"fetchEmployee",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 29 Jul 2021 04:43:55 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 3,\n    \"name\": \"saikiran\",\n    \"designtion\": null,\n    \"addressLine1\": \"SEZ-1\",\n    \"addressLine2\": \"Street Anna Nagar\",\n    \"city\": \"Banglore\",\n    \"state\": \"Karnataka\",\n    \"country\": \"INDIA\",\n    \"pincode\": \"530068\"\n}"
+				}
+			]
+		},
+		{
+			"name": "MetricInfo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": [
+				{
+					"name": "MetricInfo",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employee/viewMetrics",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employee",
+								"viewMetrics"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 29 Jul 2021 06:08:45 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"200\": 2,\n    \"201\": 1,\n    \"400\": 2,\n    \"404\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "deleteEmpById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": [
+				{
+					"name": "deleteEmpById",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employee/deleteEmployee/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employee",
+								"deleteEmployee",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "29"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 30 Jul 2021 04:56:13 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Successfully deleted resource"
+				}
+			]
+		},
+		{
+			"name": "UpdateEmployeeDetailsById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": [
+				{
+					"name": "UpdateEmployeeDetailsById",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Jesus\",\r\n    \"designation\": \"Java Developer\",\r\n    \"addressLine1\": \"SEZ-1\",\r\n    \"addressLine2\": \"Street Anna Nagar\",\r\n    \"city\": \"Banglore\",\r\n    \"state\": \"ANDHRA\",\r\n    \"country\": \"INDIA\",\r\n    \"pincode\": \"530068\",\r\n    \"isActive\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/employee/updateEmployee/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employee",
+								"updateEmployee",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 30 Jul 2021 04:55:33 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"name\": \"saikiran\",\n    \"designtion\": null,\n    \"addressLine1\": \"SEZ-1\",\n    \"addressLine2\": \"Street Anna Nagar\",\n    \"city\": \"Banglore\",\n    \"state\": \"ANDHRA\",\n    \"country\": \"INDIA\",\n    \"pincode\": \"530068\",\n    \"isActive\": true\n}"
+				}
+			]
+		}
+	]
+}
