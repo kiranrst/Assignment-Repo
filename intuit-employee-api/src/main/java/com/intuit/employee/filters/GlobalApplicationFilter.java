@@ -17,9 +17,12 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import com.intuit.employee.service.MetricsService;
 
+import lombok.extern.slf4j.Slf4j;
+
 
 @Component
-@Order(1)		
+@Order(1)	
+@Slf4j
 public class GlobalApplicationFilter extends OncePerRequestFilter {
 
 	@Autowired
@@ -33,14 +36,13 @@ public class GlobalApplicationFilter extends OncePerRequestFilter {
 			throws ServletException, IOException {
 		HttpServletRequest httpRequest = ((HttpServletRequest) request);
 		String req = httpRequest.getMethod() + " - " + httpRequest.getRequestURI();
-		System.out.println("Logging Request : " + req);
+		log.debug("Processing Request URI : " + req);
 		if(!shouldNotFilter(httpRequest)) {
 			filterChain.doFilter(request, response);
-			int status = ((HttpServletResponse) response).getStatus();
+			int status = response.getStatus();
 			metricService.updateCount(req, status);
-			System.out.println(req + " - Response Status: " + status);
 		}
-
+		log.debug("Response for URI : {} , status: {} ",req, response.getStatus());
 	}
 	
 	@Override
