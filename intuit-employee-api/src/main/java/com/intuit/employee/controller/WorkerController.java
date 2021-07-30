@@ -59,7 +59,6 @@ public class WorkerController {
 				return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 			}
 			
-			log.debug("Response GetAllEmployees {}",employeeList.get()); 
 			return new ResponseEntity(employeeList, HttpStatus.OK);
 
 		} catch (Exception e) {
@@ -85,7 +84,6 @@ public class WorkerController {
 			if (employeeList.isEmpty()) {
 				return new ResponseEntity(employeeList, HttpStatus.NO_CONTENT);
 			}
-			log.debug("Response RetrieveEmployee - {} ",employeeList.get()); 
 			return new ResponseEntity(employeeList, HttpStatus.OK);
 		} catch (Exception e) {
 			log.error("Exception while processing retrieveEmployee details {} "+e.getMessage());
@@ -111,7 +109,6 @@ public class WorkerController {
 			employeeDto.setId(emp.getId());
 			employeeDto.setName(emp.getName());
 
-			log.debug("Response createEmployee - {} ",employee); 
 			return new ResponseEntity(employeeDto, HttpStatus.CREATED);
 		} catch (Exception e) {
 			log.error("Exception while processing createEmployee :"+e.getMessage());
@@ -177,7 +174,7 @@ public class WorkerController {
 		employee.setState(employeeDetails.getState());
 
 		final Employee updatedEmployee = employeeRepository.save(employee);
-		log.debug("Response updateEmployee - {} ",updatedEmployee);
+		log.debug("Response updateEmployee - {} ",updatedEmployee.getId());
 		return ResponseEntity.ok(updatedEmployee);
 	}
 
